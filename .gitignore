@@ -1,0 +1,49 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/obj/Debug/Views/ProjectView.g.i.cs
+/obj/Debug/Views/ProjectView.g.cs
+/obj/Debug/Views/ProjectView.baml
+/obj/Debug/Views/IssueView.g.i.cs
+/obj/Debug/Views/IssueView.g.cs
+/obj/Debug/Views/IssueView.baml
+/obj/Debug/Views/IssueOverviewView.g.i.cs
+/obj/Debug/Views/IssueOverviewView.g.cs
+/obj/Debug/Views/IssueOverviewView.baml
+/obj/Debug/Views/CommentView.g.i.cs
+/obj/Debug/Views/CommentView.g.cs
+/obj/Debug/Views/CommentView.baml
+/obj/Debug/Views
+/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+/obj/Debug/MainWindow.g.i.cs
+/obj/Debug/MainWindow.g.cs
+/obj/Debug/MainWindow.baml
+/obj/Debug/GeneratedInternalTypeHelper.g.i.cs
+/obj/Debug/GeneratedInternalTypeHelper.g.cs
+/obj/Debug/BIMcollab_BCF_WPF_MVVM.Properties.Resources.resources
+/obj/Debug/BIMcollab BCF WPF MVVM_MarkupCompile.lref
+/obj/Debug/BIMcollab BCF WPF MVVM_MarkupCompile.cache
+/obj/Debug/BIMcollab BCF WPF MVVM.pdb
+/obj/Debug/BIMcollab BCF WPF MVVM.g.resources
+/obj/Debug/BIMcollab BCF WPF MVVM.exe
+/obj/Debug/BIMcollab BCF WPF MVVM.csprojAssemblyReference.cache
+/obj/Debug/BIMcollab BCF WPF MVVM.csproj.GenerateResource.cache
+/obj/Debug/BIMcollab BCF WPF MVVM.csproj.FileListAbsolute.txt
+/obj/Debug/BIMcollab BCF WPF MVVM.csproj.CoreCompileInputs.cache
+/obj/Debug/App.g.i.cs
+/obj/Debug/App.g.cs
+/obj/Debug
+/bin/Debug/BIMcollab BCF WPF MVVM.pdb
+/bin/Debug/BIMcollab BCF WPF MVVM.exe.config
+/bin/Debug/BIMcollab BCF WPF MVVM.exe
+/bin/Debug
+/.vs/BIMcollab BCF WPF MVVM/v15/Server/sqlite3/storage.ide-wal
+/.vs/BIMcollab BCF WPF MVVM/v15/Server/sqlite3/storage.ide-shm
+/.vs/BIMcollab BCF WPF MVVM/v15/Server/sqlite3/storage.ide
+/.vs/BIMcollab BCF WPF MVVM/v15/Server/sqlite3/db.lock
+/.vs/BIMcollab BCF WPF MVVM/v15/Server/sqlite3
+/.vs/BIMcollab BCF WPF MVVM/v15/.suo
+/.vs/BIMcollab BCF WPF MVVM/v15
