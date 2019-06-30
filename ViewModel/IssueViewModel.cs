@@ -7,12 +7,21 @@ namespace BIMcollab_BCF_WPF_MVVM.ViewModel
     internal class IssueViewModel
     {
         public ObservableCollection<Issue> Issues { get; set; }
+        public string PublishMessage;
 
         private Project activeProject;
 
         public IssueViewModel()
         {
             this.Issues = new ObservableCollection<Issue>();
+            this.PublishMessage = string.Empty;
+        }
+
+        public void Publish()
+        {
+            bool result = this.activeProject.TryPublish();
+
+            this.PublishMessage = result ? "Publishing Successful" : this.activeProject.ErrorMessage();
         }
 
         public void LoadIssues(Project project)

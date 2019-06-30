@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
+using System.Diagnostics.Eventing;
 
 namespace BIMcollab_BCF_WPF_MVVM.Model
 {
@@ -176,6 +179,35 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
         }
 
         #endregion
+
+        public string ErrorMessage()
+        {
+            if (this.project.HasActiveError())
+            {
+                BC_Message message = this.project.GetActiveError();
+
+                return message.GetText();
+            }
+
+            return string.Empty;
+        }
+
+        public bool TryPublish()
+        {
+            try
+            {
+                return this.Publish();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        private bool Publish()
+        {
+            return this.project.Publish();
+        }
 
         private void GetMilestones()
         {

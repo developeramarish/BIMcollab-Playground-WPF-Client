@@ -52,7 +52,8 @@ namespace BIMcollab_BCF_WPF_MVVM.Views
 
         private void PublishMenuItem_OnClick(object sender, RoutedEventArgs e)
         {
-            // TODO
+            this.issueViewModelObject.Publish();
+            this.ShowMessageBox(this.issueViewModelObject.PublishMessage);
         }
 
         private void EditMenuItem_OnClick(object sender, RoutedEventArgs e)
@@ -63,6 +64,11 @@ namespace BIMcollab_BCF_WPF_MVVM.Views
         private void AddMenuItem_OnClick(object sender, RoutedEventArgs e)
         {
             // TODO
+        }
+
+        private void ShowMessageBox(string message)
+        {
+            MessageBox.Show(message, "BIMcollab Playground");
         }
     }
 }

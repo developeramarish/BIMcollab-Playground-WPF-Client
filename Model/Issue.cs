@@ -143,6 +143,11 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
             get { return this.GetComments(); }
         }
 
+        public void IncludeInPublish()
+        {
+            this.issue.IncludeInPublish(true);
+        }
+
         private ImageSource GetIssueSnapshot()
         {
             var image = new Image();
