@@ -47,3 +47,41 @@
 /.vs/BIMcollab BCF WPF MVVM/v15/Server/sqlite3
 /.vs/BIMcollab BCF WPF MVVM/v15/.suo
 /.vs/BIMcollab BCF WPF MVVM/v15
+bin/Release/BIMcollab BCF WPF MVVM.exe
+bin/Release/BIMcollab BCF WPF MVVM.exe.config
+bin/Release/BIMcollab BCF WPF MVVM.pdb
+obj/Release/App.g.cs
+obj/Release/App.g.i.cs
+obj/Release/BIMcollab BCF WPF MVVM.csproj.CoreCompileInputs.cache
+obj/Release/BIMcollab BCF WPF MVVM.csproj.FileListAbsolute.txt
+obj/Release/BIMcollab BCF WPF MVVM.csproj.GenerateResource.cache
+obj/Release/BIMcollab BCF WPF MVVM.exe
+obj/Release/BIMcollab BCF WPF MVVM.g.resources
+obj/Release/BIMcollab BCF WPF MVVM.pdb
+obj/Release/BIMcollab BCF WPF MVVM_MarkupCompile.cache
+obj/Release/BIMcollab BCF WPF MVVM_MarkupCompile.lref
+obj/Release/BIMcollab_BCF_WPF_MVVM.Properties.Resources.resources
+obj/Release/GeneratedInternalTypeHelper.g.cs
+obj/Release/GeneratedInternalTypeHelper.g.i.cs
+obj/Release/MainWindow.baml
+obj/Release/MainWindow.g.cs
+obj/Release/MainWindow.g.i.cs
+obj/Release/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+obj/Release/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+obj/Release/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+obj/Release/TempPE/Properties.Resources.Designer.cs.dll
+obj/Release/Views/CommentView.baml
+obj/Release/Views/CommentView.g.cs
+obj/Release/Views/CommentView.g.i.cs
+obj/Release/Views/EditIssueView.baml
+obj/Release/Views/EditIssueView.g.cs
+obj/Release/Views/EditIssueView.g.i.cs
+obj/Release/Views/IssueOverviewView.baml
+obj/Release/Views/IssueOverviewView.g.cs
+obj/Release/Views/IssueOverviewView.g.i.cs
+obj/Release/Views/IssueView.baml
+obj/Release/Views/IssueView.g.cs
+obj/Release/Views/IssueView.g.i.cs
+obj/Release/Views/ProjectView.baml
+obj/Release/Views/ProjectView.g.cs
+obj/Release/Views/ProjectView.g.i.cs
