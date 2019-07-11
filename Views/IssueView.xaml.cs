@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using BIMcollab_BCF_WPF_MVVM.Model;
@@ -12,6 +13,7 @@ namespace BIMcollab_BCF_WPF_MVVM.Views
     public partial class IssueView : UserControl
     {
         private readonly IssueViewModel issueViewModelObject;
+        private EditIssueView editIssueView;
 
         public IssueView()
         {
@@ -42,6 +44,7 @@ namespace BIMcollab_BCF_WPF_MVVM.Views
         internal void LoadIssues(Project activeProject)
         {
             this.issueViewModelObject.LoadIssues(activeProject);
+            this.editIssueView = new EditIssueView(activeProject);
         }
 
         private void IssuesGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
@@ -58,12 +61,16 @@ namespace BIMcollab_BCF_WPF_MVVM.Views
 
         private void EditMenuItem_OnClick(object sender, RoutedEventArgs e)
         {
-            // TODO
+            int selectedRowIndex = this.IssuesGrid.SelectedIndex;
+
+            editIssueView.EditIssue(this.issueViewModelObject.Issues[selectedRowIndex]);
+            editIssueView.Show();
         }
 
         private void AddMenuItem_OnClick(object sender, RoutedEventArgs e)
         {
-            // TODO
+            editIssueView.NewIssue();
+            editIssueView.Show();
         }
 
         private void ShowMessageBox(string message)

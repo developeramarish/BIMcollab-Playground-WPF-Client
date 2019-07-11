@@ -60,11 +60,17 @@
     <Compile Include="Model\Comment.cs" />
     <Compile Include="Model\Project.cs" />
     <Compile Include="ViewModel\CommentViewModel.cs" />
+    <Compile Include="ViewModel\EditIssueAbstractViewModel.cs" />
+    <Compile Include="ViewModel\EditIssueConcreteViewModel.cs" />
     <Compile Include="ViewModel\IssueOverviewViewModel.cs" />
     <Compile Include="ViewModel\IssueViewModel.cs" />
+    <Compile Include="ViewModel\NewIssueConcreteViewModel.cs" />
     <Compile Include="ViewModel\ProjectViewModel.cs" />
     <Compile Include="Views\CommentView.xaml.cs">
       <DependentUpon>CommentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditIssueView.xaml.cs">
+      <DependentUpon>EditIssueView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\IssueOverviewView.xaml.cs">
       <DependentUpon>IssueOverviewView.xaml</DependentUpon>
@@ -161,6 +167,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\CommentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EditIssueView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

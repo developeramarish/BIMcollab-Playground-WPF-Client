@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Diagnostics.Eventing;
 
 namespace BIMcollab_BCF_WPF_MVVM.Model
 {
@@ -12,7 +9,7 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
 
         public Project(string username, string password)
         {
-            var dataModel = BC_DataModel.GetInstance();
+            BC_DataModel dataModel = BC_DataModel.GetInstance();
 
             dataModel.SetActiveUser(string.Empty,
                                     string.Empty,
@@ -51,6 +48,21 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
         public List<string> Priorities { get; private set; }
 
         public List<string> Statuses { get; private set; }
+
+        public int DefaultIssueType
+        {
+            get { return (int)this.project.GetDefaultIssueTypeIndex(); }
+        }
+
+        public string DefaultStatusType
+        {
+            get { return this.Statuses[(int)this.project.GetDefaultIssueStatusIndex()]; }
+        }
+
+        public int DefaultPriorityType
+        {
+            get { return (int)this.project.GetDefaultIssuePriorityIndex(); }
+        }
 
         #region Issues
 
@@ -190,6 +202,11 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
             }
 
             return string.Empty;
+        }
+
+        public BC_Issue CreateIssue()
+        {
+            return this.project.CreateIssue();
         }
 
         public bool TryPublish()

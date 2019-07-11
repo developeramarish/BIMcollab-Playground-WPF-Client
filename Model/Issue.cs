@@ -71,7 +71,10 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
             }
         }
 
-        public string Type { get; }
+        public string Type
+        {
+            get;
+        }
 
         public uint PriorityID
         {
@@ -112,6 +115,19 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
                 if (this.issue.GetTitle() != value)
                 {
                     this.issue.SetTitle(value);
+                }
+            }
+        }
+
+        public string Description
+        {
+            get { return this.issue.GetDescription(); }
+
+            set
+            {
+                if (this.issue.GetDescription() != value)
+                {
+                    this.issue.SetDescription(value);
                 }
             }
         }

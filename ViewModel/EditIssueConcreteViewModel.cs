@@ -1,0 +1,37 @@
+﻿using BIMcollab_BCF_WPF_MVVM.Model;
+
+namespace BIMcollab_BCF_WPF_MVVM.ViewModel
+{
+    internal class EditIssueConcreteViewModel : EditIssueAbstractViewModel
+    {
+        public EditIssueConcreteViewModel(Project project)
+        {
+            this.activeProject = project;
+        }
+
+        protected override string GetActiveStatus()
+        {
+            return this.issue.Status;
+        }
+
+        protected override int GetActiveType()
+        {
+            return (int)this.issue.TypeID;
+        }
+
+        protected override int GetActiveMilestone()
+        {
+            return (int)this.issue.MilestoneID;
+        }
+
+        protected override int GetActiveArea()
+        {
+            return (int)this.issue.AreaID;
+        }
+
+        protected override int GetActivePriority()
+        {
+            return (int) this.issue.PriorityID;
+        }
+    }
+}
