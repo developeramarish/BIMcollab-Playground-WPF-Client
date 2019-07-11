@@ -30,7 +30,7 @@
         <Label Name="PriorityLabel" Content="Priority" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Center"/>
         <ComboBox Name="PriorityComboBox" ItemsSource="{Binding Priorities}" SelectedIndex="{Binding ActivePriority}" HorizontalAlignment="Left" Margin="70,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
         <Label Name="AssignedLabel" Content="Assigned" HorizontalAlignment="Left" Margin="200,0,0,0" Grid.Row="2" VerticalAlignment="Center"/>
-        <ComboBox Name="AssignedComboBox" HorizontalAlignment="Left" Margin="270,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
+        <ComboBox Name="AssignedComboBox" ItemsSource="{Binding Users}" SelectedIndex="{Binding OwnerIndex}" HorizontalAlignment="Left" Margin="270,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
         <Label Name="DeadlineLabel" Content="Deadline" HorizontalAlignment="Left" Margin="400,0,0,0" Grid.Row="2" VerticalAlignment="Center"/>
         <DatePicker  Name="DeadlineDatePicker" HorizontalAlignment="Left" Margin="470,13,0,13" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
 

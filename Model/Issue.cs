@@ -142,6 +142,19 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
             get { return this.issue.GetOwner().GetName(); }
         }
 
+        public uint OwnerIndex
+        {
+            get { return this.issue.GetOwnerIndex(); }
+
+            set
+            {
+                if (this.issue.GetOwnerIndex() != value)
+                {
+                    this.issue.SetOwnerByIndex(value);
+                }
+            }
+        }
+
         public string Creator
         {
             get { return this.issue.GetCreator().GetName(); }

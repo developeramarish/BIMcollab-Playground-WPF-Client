@@ -33,5 +33,10 @@ namespace BIMcollab_BCF_WPF_MVVM.ViewModel
         {
             return (int) this.issue.PriorityID;
         }
+
+        protected override int GetOwnerIndex()
+        {
+            return (int) this.issue.OwnerIndex;
+        }
     }
 }

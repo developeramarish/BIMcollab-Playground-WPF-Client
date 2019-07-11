@@ -30,6 +30,7 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
             this.GetTypes();
             this.GetPriorities();
             this.GetStatuses();
+            this.GetUsers();
         }
 
         public string Title
@@ -48,6 +49,8 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
         public List<string> Priorities { get; private set; }
 
         public List<string> Statuses { get; private set; }
+
+        public List<string> Users { get; private set; }
 
         public int DefaultIssueType
         {
@@ -295,6 +298,23 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
             {
                 string status = this.project.GetIssueStatusLabelByIndex(i);
                 this.Statuses.Add(status);
+            }
+        }
+
+        private void GetUsers()
+        {
+            this.Users = new List<string>();
+
+            uint numberOfProjectUsers = this.project.GetNumberOfUsers();
+
+            for (uint i = 0; i < numberOfProjectUsers; i++)
+            {
+                BC_User user = this.project.GetUserByIndex(i);
+
+                if (user.CanBecomeOwner())
+                {
+                    this.Users.Add($"{user.GetFirstName()} {user.GetLastName()}");
+                }
             }
         }
     }

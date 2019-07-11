@@ -33,5 +33,10 @@ namespace BIMcollab_BCF_WPF_MVVM.ViewModel
         {
             return this.activeProject.DefaultPriorityType;
         }
+
+        protected override int GetOwnerIndex()
+        {
+            return 0;
+        }
     }
 }
