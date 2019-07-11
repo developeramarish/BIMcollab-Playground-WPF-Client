@@ -42,6 +42,11 @@ namespace BIMcollab_BCF_WPF_MVVM.ViewModel
             get { return this.activeProject.Users; }
         }
 
+        public List<string> Visibilities
+        {
+            get { return this.activeProject.Visibilities; }
+        }
+
         public string Description
         {
             get { return this.issue.Description; }
@@ -84,6 +89,12 @@ namespace BIMcollab_BCF_WPF_MVVM.ViewModel
             set { this.issue.OwnerIndex = (uint)value; }
         }
 
+        public int ActiveVisibility
+        {
+            get { return this.GetActiveVisibility(); }
+            set { this.issue.VisibilityID = (uint) value; }
+        }
+
         protected Project activeProject;
         protected Issue issue;
 
@@ -117,5 +128,7 @@ namespace BIMcollab_BCF_WPF_MVVM.ViewModel
         protected abstract int GetActivePriority();
 
         protected abstract int GetOwnerIndex();
+
+        protected abstract int GetActiveVisibility();
     }
 }

@@ -155,6 +155,19 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
             }
         }
 
+        public uint VisibilityID
+        {
+            get { return this.issue.GetVisibility(); }
+
+            set
+            {
+                if (this.issue.GetVisibility() != value)
+                {
+                    this.issue.SetVisibility(value);
+                }
+            }
+        }
+
         public string Creator
         {
             get { return this.issue.GetCreator().GetName(); }

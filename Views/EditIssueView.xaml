@@ -37,7 +37,7 @@
         <Label Name="ApprovalLabel" Content="Approval" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" VerticalAlignment="Center"/>
         <ComboBox Name="ApprovalComboBox" HorizontalAlignment="Left" Margin="70,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="450"/>
         <Label Name="VisibleLabel" Content="Visible for" HorizontalAlignment="Left" Margin="550,0,0,0" Grid.Row="3" VerticalAlignment="Center"/>
-        <ComboBox Name="VisibleComboBox" HorizontalAlignment="Left" Margin="630,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="150"/>
+        <ComboBox Name="VisibleComboBox" ItemsSource="{Binding Visibilities}" SelectedIndex="{Binding ActiveVisibility}" HorizontalAlignment="Left" Margin="630,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="150"/>
 
         <Label Name="DescriptionLabel" Content="Description" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" VerticalAlignment="Center"/>
         <TextBox Name="DescriptionTextBox" Text="{Binding Description}" HorizontalAlignment="Left" Height="22" Margin="80,14,0,14" TextWrapping="Wrap" VerticalAlignment="Center" Width="700" Grid.Row="4"/>

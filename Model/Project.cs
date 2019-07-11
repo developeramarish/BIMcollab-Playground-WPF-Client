@@ -31,6 +31,7 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
             this.GetPriorities();
             this.GetStatuses();
             this.GetUsers();
+            this.GetVisibilities();
         }
 
         public string Title
@@ -51,6 +52,8 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
         public List<string> Statuses { get; private set; }
 
         public List<string> Users { get; private set; }
+
+        public List<string> Visibilities { get; private set; }
 
         public int DefaultIssueType
         {
@@ -315,6 +318,19 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
                 {
                     this.Users.Add($"{user.GetFirstName()} {user.GetLastName()}");
                 }
+            }
+        }
+
+        private void GetVisibilities()
+        {
+            this.Visibilities = new List<string>();
+
+            uint numberOfVisibilities = this.project.GetNumberOfIssueVisibilities();
+
+            for (uint i = 0; i < numberOfVisibilities; i++)
+            {
+                string visibility = this.project.GetIssueVisibilityLabelByIndex(i);
+                this.Visibilities.Add(visibility);
             }
         }
     }

@@ -38,5 +38,10 @@ namespace BIMcollab_BCF_WPF_MVVM.ViewModel
         {
             return 0;
         }
+
+        protected override int GetActiveVisibility()
+        {
+            return 0;
+        }
     }
 }
