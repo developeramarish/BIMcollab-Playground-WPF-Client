@@ -21,23 +21,18 @@
         <Label Name="StatusLabel" Content="{Binding ActiveStatus}" HorizontalAlignment="Right" Margin="711,0,30,0" VerticalAlignment="Center" Grid.Row="0"/>
 
         <Label Name="TypeLabel" Content="Type" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
-        <ComboBox Name="TypeComboBox" ItemsSource="{Binding Types}" SelectedIndex="{Binding ActiveType}" HorizontalAlignment="Left" Margin="70,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="120"/>
+        <ComboBox Name="TypeComboBox" ItemsSource="{Binding Types}" SelectedIndex="{Binding ActiveType}" HorizontalAlignment="Left" Margin="75,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="120"/>
         <Label Name="AreaLabel" Content="Area" HorizontalAlignment="Left" Margin="200,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
         <ComboBox Name="AreaComboBox" ItemsSource="{Binding Areas}" SelectedIndex="{Binding ActiveArea}" HorizontalAlignment="Left" Margin="270,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="120"/>
         <Label Name="MilestoneLabel" Content="Milestone" HorizontalAlignment="Left" Margin="400,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
         <ComboBox Name="MilestoneComboBox" ItemsSource="{Binding Milestones}" SelectedIndex="{Binding ActiveMilestone}" HorizontalAlignment="Left" Margin="470,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="120"/>
 
         <Label Name="PriorityLabel" Content="Priority" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Center"/>
-        <ComboBox Name="PriorityComboBox" ItemsSource="{Binding Priorities}" SelectedIndex="{Binding ActivePriority}" HorizontalAlignment="Left" Margin="70,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
+        <ComboBox Name="PriorityComboBox" ItemsSource="{Binding Priorities}" SelectedIndex="{Binding ActivePriority}" HorizontalAlignment="Left" Margin="75,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
         <Label Name="AssignedLabel" Content="Assigned" HorizontalAlignment="Left" Margin="200,0,0,0" Grid.Row="2" VerticalAlignment="Center"/>
         <ComboBox Name="AssignedComboBox" ItemsSource="{Binding Users}" SelectedIndex="{Binding OwnerIndex}" HorizontalAlignment="Left" Margin="270,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
-        <Label Name="DeadlineLabel" Content="Deadline" HorizontalAlignment="Left" Margin="400,0,0,0" Grid.Row="2" VerticalAlignment="Center"/>
-        <DatePicker  Name="DeadlineDatePicker" HorizontalAlignment="Left" Margin="470,13,0,13" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
-
-        <Label Name="ApprovalLabel" Content="Approval" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" VerticalAlignment="Center"/>
-        <ComboBox Name="ApprovalComboBox" HorizontalAlignment="Left" Margin="70,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="450"/>
-        <Label Name="VisibleLabel" Content="Visible for" HorizontalAlignment="Left" Margin="550,0,0,0" Grid.Row="3" VerticalAlignment="Center"/>
-        <ComboBox Name="VisibleComboBox" ItemsSource="{Binding Visibilities}" SelectedIndex="{Binding ActiveVisibility}" HorizontalAlignment="Left" Margin="630,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="150"/>
+        <Label Name="VisibleLabel" Content="Visible for" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" VerticalAlignment="Center"/>
+        <ComboBox Name="VisibleComboBox" ItemsSource="{Binding Visibilities}" SelectedIndex="{Binding ActiveVisibility}" HorizontalAlignment="Left" Margin="75,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="150"/>
 
         <Label Name="DescriptionLabel" Content="Description" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" VerticalAlignment="Center"/>
         <TextBox Name="DescriptionTextBox" Text="{Binding Description}" HorizontalAlignment="Left" Height="22" Margin="80,14,0,14" TextWrapping="Wrap" VerticalAlignment="Center" Width="700" Grid.Row="4"/>
