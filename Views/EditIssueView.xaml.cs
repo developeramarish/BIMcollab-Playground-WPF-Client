@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using BIMcollab_BCF_WPF_MVVM.Model;
 using BIMcollab_BCF_WPF_MVVM.ViewModel;
 
@@ -28,6 +29,8 @@ namespace BIMcollab_BCF_WPF_MVVM.Views
             this.editIssueViewModelObject.SetIssue(editedIssue);
 
             this.DataContext = this.editIssueViewModelObject;
+
+            this.RefreshControls();
         }
 
         internal void NewIssue()
@@ -37,6 +40,8 @@ namespace BIMcollab_BCF_WPF_MVVM.Views
             this.editIssueViewModelObject.CreateNewIssue();
 
             this.DataContext = this.editIssueViewModelObject;
+
+            this.RefreshControls();
         }
 
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
@@ -74,12 +79,17 @@ namespace BIMcollab_BCF_WPF_MVVM.Views
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
 
+        private void RefreshControls()
+        {
+            this.TitleTextBox.GetBindingExpression(TextBox.TextProperty)?.UpdateTarget();
         }
     }
 }

@@ -14,13 +14,6 @@ namespace BIMcollab_BCF_WPF_MVVM.ViewModel
         protected Project activeProject;
         protected Issue issue;
 
-        public string Title
-        {
-            get { return this.issue.Title; }
-
-            set { this.issue.Title = value; }
-        }
-
         public List<string> Milestones
         {
             get { return this.activeProject.Milestones; }
@@ -55,6 +48,8 @@ namespace BIMcollab_BCF_WPF_MVVM.ViewModel
         {
             get { return this.activeProject.Visibilities; }
         }
+
+        public string Title { get; set; }
 
         public string Description
         {
@@ -172,6 +167,8 @@ namespace BIMcollab_BCF_WPF_MVVM.ViewModel
         public void SetIssue(Issue editedIssue)
         {
             this.issue = editedIssue;
+
+            this.Title = this.issue.Title;
         }
 
         public void CreateNewIssue()
