@@ -38,12 +38,13 @@
         <TextBox Name="DescriptionTextBox" IsEnabled="{Binding DesriptionTextBoxEnabled}" Text="{Binding Description}" HorizontalAlignment="Left" Height="22" Margin="80,14,0,14" TextWrapping="Wrap" VerticalAlignment="Center" Width="700" Grid.Row="4"/>
 
         <StackPanel Name="BottomStackPanel" HorizontalAlignment="Right" Height="25" Margin="0,18.333,13.333,8" Grid.Row="5" VerticalAlignment="Center" Width="760" Orientation="Horizontal" FlowDirection="RightToLeft">
-            <Button Name="CancelButton" Content="Cancel" Width="86" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,3,0,2.333"/>
+            <Button Name="CancelButton" Content="Cancel" Width="86" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,3,0,2.333" Click="CancelButton_Click"/>
             <Button Name="ReopenButton" Visibility="{Binding ReopenButtonVisible}" Content="Reopen" Width="90" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,3,0,2.333" Click="ReopenButton_Click"/>
             <Button Name="CloseButton" Visibility="{Binding CloseButtonVisible}" Content="Close" Width="82" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,3,0,2.333" Click="CloseButton_Click"/>
             <Button Name="ReactivateButton" Visibility="{Binding ReactivateButtonVisible}" Content="Reactivate" Width="89" Margin="10,3,0,2.333" VerticalAlignment="Center" HorizontalAlignment="Right" Click="ReactivateButton_Click"/>
             <Button Name="ResolveAndCloseButton" Visibility="{Binding ResolveAndCloseButtonVisible}" Content="Resolve and close" Width="106" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,3,0,2.333" Click="ResolveAndCloseButton_Click"/>
             <Button Name="ResolveButton" Visibility="{Binding ResolvedButtonVisible}" Content="Resolve" Width="86" Margin="10,3,0,2.333" VerticalAlignment="Center" HorizontalAlignment="Right" Click="ResolveButton_Click"/>
+            <Button Name="SaveButton" Content="Save" Width="86" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,3,0,2.333" Click="SaveButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>

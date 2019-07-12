@@ -71,5 +71,15 @@ namespace BIMcollab_BCF_WPF_MVVM.Views
         {
             this.editIssueViewModelObject.SetStatusResolved();
         }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
