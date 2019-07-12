@@ -17,36 +17,33 @@
         </Grid.RowDefinitions>
 
         <Label Name="TitleLabel" Content="Title" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="0" VerticalAlignment="Center"/>
-        <TextBox Name="TitleTextBox" Text="{Binding Title}" HorizontalAlignment="Left" Height="22" Margin="48,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="543" Grid.Row="0"/>
+        <TextBox Name="TitleTextBox" IsEnabled="{Binding TitleTextBoxEnabled}"  Text="{Binding Title}" HorizontalAlignment="Left" Height="22" Margin="48,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="543" Grid.Row="0"/>
         <Label Name="StatusLabel" Content="{Binding ActiveStatus}" HorizontalAlignment="Right" Margin="711,0,30,0" VerticalAlignment="Center" Grid.Row="0"/>
 
         <Label Name="TypeLabel" Content="Type" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
-        <ComboBox Name="TypeComboBox" ItemsSource="{Binding Types}" SelectedIndex="{Binding ActiveType}" HorizontalAlignment="Left" Margin="75,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="120"/>
+        <ComboBox Name="TypeComboBox" IsEnabled="{Binding TypeComboBoxEnabled}" ItemsSource="{Binding Types}" SelectedIndex="{Binding ActiveType}" HorizontalAlignment="Left" Margin="75,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="120"/>
         <Label Name="AreaLabel" Content="Area" HorizontalAlignment="Left" Margin="200,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
-        <ComboBox Name="AreaComboBox" ItemsSource="{Binding Areas}" SelectedIndex="{Binding ActiveArea}" HorizontalAlignment="Left" Margin="270,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="120"/>
+        <ComboBox Name="AreaComboBox" IsEnabled="{Binding AreaComboBoxEnabled}" ItemsSource="{Binding Areas}" SelectedIndex="{Binding ActiveArea}" HorizontalAlignment="Left" Margin="270,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="120"/>
         <Label Name="MilestoneLabel" Content="Milestone" HorizontalAlignment="Left" Margin="400,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
-        <ComboBox Name="MilestoneComboBox" ItemsSource="{Binding Milestones}" SelectedIndex="{Binding ActiveMilestone}" HorizontalAlignment="Left" Margin="470,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="120"/>
+        <ComboBox Name="MilestoneComboBox" IsEnabled="{Binding MilestoneComboBoxEnabled}" ItemsSource="{Binding Milestones}" SelectedIndex="{Binding ActiveMilestone}" HorizontalAlignment="Left" Margin="470,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="120"/>
 
         <Label Name="PriorityLabel" Content="Priority" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Center"/>
-        <ComboBox Name="PriorityComboBox" ItemsSource="{Binding Priorities}" SelectedIndex="{Binding ActivePriority}" HorizontalAlignment="Left" Margin="75,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
+        <ComboBox Name="PriorityComboBox" IsEnabled="{Binding PriorityComboBoxEnabled}" ItemsSource="{Binding Priorities}" SelectedIndex="{Binding ActivePriority}" HorizontalAlignment="Left" Margin="75,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
         <Label Name="AssignedLabel" Content="Assigned" HorizontalAlignment="Left" Margin="200,0,0,0" Grid.Row="2" VerticalAlignment="Center"/>
-        <ComboBox Name="AssignedComboBox" ItemsSource="{Binding Users}" SelectedIndex="{Binding OwnerIndex}" HorizontalAlignment="Left" Margin="270,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
+        <ComboBox Name="AssignedComboBox" IsEnabled="{Binding AssignedComboBoxEnabled}" ItemsSource="{Binding Users}" SelectedIndex="{Binding OwnerIndex}" HorizontalAlignment="Left" Margin="270,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
         <Label Name="VisibleLabel" Content="Visible for" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" VerticalAlignment="Center"/>
-        <ComboBox Name="VisibleComboBox" ItemsSource="{Binding Visibilities}" SelectedIndex="{Binding ActiveVisibility}" HorizontalAlignment="Left" Margin="75,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="150"/>
+        <ComboBox Name="VisibleComboBox" IsEnabled="{Binding VisibilityComboBoxEnabled}" ItemsSource="{Binding Visibilities}" SelectedIndex="{Binding ActiveVisibility}" HorizontalAlignment="Left" Margin="75,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="150"/>
 
         <Label Name="DescriptionLabel" Content="Description" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" VerticalAlignment="Center"/>
-        <TextBox Name="DescriptionTextBox" Text="{Binding Description}" HorizontalAlignment="Left" Height="22" Margin="80,14,0,14" TextWrapping="Wrap" VerticalAlignment="Center" Width="700" Grid.Row="4"/>
+        <TextBox Name="DescriptionTextBox" IsEnabled="{Binding DesriptionTextBoxEnabled}" Text="{Binding Description}" HorizontalAlignment="Left" Height="22" Margin="80,14,0,14" TextWrapping="Wrap" VerticalAlignment="Center" Width="700" Grid.Row="4"/>
 
-        <StackPanel HorizontalAlignment="Left" Height="25" Margin="10,10.333,0,0" Grid.Row="5" VerticalAlignment="Center" Width="773" Orientation="Horizontal">
-            <Button Name="SaveButton" Content="Save" Width="75" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Button Name="ResolveButton" Content="Resolve" Width="86" Margin="10,3,0,2.333" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-            <Button Name="ResolveAndCloseButton" Content="Resolve and close" Width="106" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,3,0,2.333"/>
-            <Button Name="ReactivateButton" Content="Reactivate" Width="89" Margin="10,3,0,2.333" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-            <Button Name="CloseButton" Content="Close" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,3,0,2.333"/>
-            <Button Name="ReopenButton" Content="Reopen" Width="90" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,3,0,2.333"/>
-            <Button Name="ApproveButton" Content="Approve" Width="86" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,3,0,2.333"/>
-            <Button Name="RejectButton" Content="Reject" Width="85" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,3,0,2.333"/>
-            <Button Name="CanncelButton" Content="Cancel" Width="86" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,3,0,2.333"/>
+        <StackPanel Name="BottomStackPanel" HorizontalAlignment="Right" Height="25" Margin="0,18.333,13.333,8" Grid.Row="5" VerticalAlignment="Center" Width="760" Orientation="Horizontal" FlowDirection="RightToLeft">
+            <Button Name="CancelButton" Content="Cancel" Width="86" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,3,0,2.333"/>
+            <Button Name="ReopenButton" Visibility="{Binding ReopenButtonVisible}" Content="Reopen" Width="90" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,3,0,2.333" Click="ReopenButton_Click"/>
+            <Button Name="CloseButton" Visibility="{Binding CloseButtonVisible}" Content="Close" Width="82" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,3,0,2.333" Click="CloseButton_Click"/>
+            <Button Name="ReactivateButton" Visibility="{Binding ReactivateButtonVisible}" Content="Reactivate" Width="89" Margin="10,3,0,2.333" VerticalAlignment="Center" HorizontalAlignment="Right" Click="ReactivateButton_Click"/>
+            <Button Name="ResolveAndCloseButton" Visibility="{Binding ResolveAndCloseButtonVisible}" Content="Resolve and close" Width="106" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,3,0,2.333" Click="ResolveAndCloseButton_Click"/>
+            <Button Name="ResolveButton" Visibility="{Binding ResolvedButtonVisible}" Content="Resolve" Width="86" Margin="10,3,0,2.333" VerticalAlignment="Center" HorizontalAlignment="Right" Click="ResolveButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -46,5 +46,30 @@ namespace BIMcollab_BCF_WPF_MVVM.Views
             e.Cancel = true;
             this.Hide();
         }
+
+        private void ReopenButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.editIssueViewModelObject.SetStatusActive();
+        }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.editIssueViewModelObject.SetStatusClosed();
+        }
+
+        private void ReactivateButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.editIssueViewModelObject.SetStatusActive();
+        }
+
+        private void ResolveAndCloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.editIssueViewModelObject.SetStatusClosed();
+        }
+
+        private void ResolveButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.editIssueViewModelObject.SetStatusResolved();
+        }
     }
 }

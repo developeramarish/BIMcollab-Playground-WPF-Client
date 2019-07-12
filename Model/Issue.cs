@@ -190,6 +190,16 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
             this.issue.IncludeInPublish(true);
         }
 
+        public bool IsOperationAllowed(BC_Operation operation)
+        {
+            return this.issue.IsOperationAllowed(operation);
+        }
+
+        public bool IsOperationAllowed(BC_Operation operation, uint target)
+        {
+            return this.issue.IsOperationAllowed(operation, target);
+        }
+
         private ImageSource GetIssueSnapshot()
         {
             var image = new Image();
