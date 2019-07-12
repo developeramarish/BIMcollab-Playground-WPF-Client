@@ -34,6 +34,11 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
 
             set
             {
+                if (!this.issue.IsOperationAllowed(BC_Operation.operationIssueChangeMilestone))
+                {
+                    return;
+                }
+
                 if (this.issue.GetMilestone() != value)
                 {
                     this.issue.SetMilestone(value);
@@ -49,6 +54,11 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
 
             set
             {
+                if (!this.issue.IsOperationAllowed(BC_Operation.operationIssueChangeArea))
+                {
+                    return;
+                }
+
                 if (this.issue.GetArea() != value)
                 {
                     this.issue.SetArea(value);
@@ -64,6 +74,11 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
 
             set
             {
+                if (!this.issue.IsOperationAllowed(BC_Operation.operationIssueChangeType))
+                {
+                    return;
+                }
+
                 if (this.issue.GetIssueType() != value)
                 {
                     this.issue.SetIssueType(value);
@@ -82,6 +97,11 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
 
             set
             {
+                if (!this.issue.IsOperationAllowed(BC_Operation.operationIssueChangePriority))
+                {
+                    return;
+                }
+
                 if (this.issue.GetPriority() != value)
                 {
                     this.issue.SetPriority(value);
@@ -97,6 +117,11 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
 
             set
             {
+                if (!this.issue.IsOperationAllowed(BC_Operation.operationIssueChangeStatus))
+                {
+                    return;
+                }
+
                 if (this.issue.GetStatus() != value)
                 {
                     this.issue.SetStatus(value);
@@ -112,6 +137,11 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
 
             set
             {
+                if (!this.issue.IsOperationAllowed(BC_Operation.operationIssueChangeTitle))
+                {
+                    return;
+                }
+
                 if (this.issue.GetTitle() != value)
                 {
                     this.issue.SetTitle(value);
@@ -125,6 +155,11 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
 
             set
             {
+                if (!this.issue.IsOperationAllowed(BC_Operation.operationIssueChangeDescription))
+                {
+                    return;
+                }
+
                 if (this.issue.GetDescription() != value)
                 {
                     this.issue.SetDescription(value);
@@ -148,6 +183,11 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
 
             set
             {
+                if (!this.issue.IsOperationAllowed(BC_Operation.operationIssueChangeOwner))
+                {
+                    return;
+                }
+
                 if (this.issue.GetOwnerIndex() != value)
                 {
                     this.issue.SetOwnerByIndex(value);
@@ -161,6 +201,11 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
 
             set
             {
+                if (!this.issue.IsOperationAllowed(BC_Operation.operationIssueChangeVisibility))
+                {
+                    return;
+                }
+
                 if (this.issue.GetVisibility() != value)
                 {
                     this.issue.SetVisibility(value);
