@@ -35,7 +35,7 @@
         <ComboBox Name="VisibleComboBox" IsEnabled="{Binding VisibilityComboBoxEnabled}" ItemsSource="{Binding Visibilities}" SelectedIndex="{Binding ActiveVisibility}" HorizontalAlignment="Left" Margin="75,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="150"/>
 
         <Label Name="DescriptionLabel" Content="Description" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" VerticalAlignment="Center"/>
-        <TextBox Name="DescriptionTextBox" IsEnabled="{Binding DesriptionTextBoxEnabled}" Text="{Binding Description}" HorizontalAlignment="Left" Height="22" Margin="80,14,0,14" TextWrapping="Wrap" VerticalAlignment="Center" Width="700" Grid.Row="4"/>
+        <TextBox Name="DescriptionTextBox" IsEnabled="{Binding DescriptionTextBoxEnabled}" Text="{Binding Description}" HorizontalAlignment="Left" Height="22" Margin="80,14,0,14" TextWrapping="Wrap" VerticalAlignment="Center" Width="700" Grid.Row="4"/>
 
         <StackPanel Name="BottomStackPanel" HorizontalAlignment="Right" Height="25" Margin="0,18.333,13.333,8" Grid.Row="5" VerticalAlignment="Center" Width="760" Orientation="Horizontal" FlowDirection="RightToLeft">
             <Button Name="CancelButton" Content="Cancel" Width="86" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,3,0,2.333" Click="CancelButton_Click"/>

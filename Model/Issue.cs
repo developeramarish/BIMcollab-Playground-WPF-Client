@@ -46,7 +46,7 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
             }
         }
 
-        public string Milestone { get; }
+        public string Milestone { get; set; }
 
         public uint AreaID
         {
@@ -66,7 +66,7 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
             }
         }
 
-        public string Area { get; }
+        public string Area { get; set; }
 
         public uint TypeID
         {
@@ -86,10 +86,7 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
             }
         }
 
-        public string Type
-        {
-            get;
-        }
+        public string Type { get; set; }
 
         public uint PriorityID
         {
@@ -109,7 +106,7 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
             }
         }
 
-        public string Priority { get; }
+        public string Priority { get; set; }
 
         public uint StatusID
         {
@@ -129,7 +126,7 @@ namespace BIMcollab_BCF_WPF_MVVM.Model
             }
         }
 
-        public string Status { get; }
+        public string Status { get; set; }
 
         public string Title
         {

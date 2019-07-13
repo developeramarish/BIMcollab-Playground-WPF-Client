@@ -63,14 +63,17 @@ namespace BIMcollab_BCF_WPF_MVVM.Views
         {
             int selectedRowIndex = this.IssuesGrid.SelectedIndex;
 
-            editIssueView.EditIssue(this.issueViewModelObject.Issues[selectedRowIndex]);
-            editIssueView.Show();
+            this.editIssueView.EditIssue(this.issueViewModelObject.Issues[selectedRowIndex]);
+            this.editIssueView.ShowDialog();
+
+            this.IssuesGrid.Items.Refresh();
+            this.SelectionChanged?.Invoke(new SelectionChangedEventArgs(this.issueViewModelObject.Issues[selectedRowIndex]));
         }
 
         private void AddMenuItem_OnClick(object sender, RoutedEventArgs e)
         {
-            editIssueView.NewIssue();
-            editIssueView.Show();
+            this.editIssueView.NewIssue();
+            this.editIssueView.ShowDialog();
         }
 
         private void ShowMessageBox(string message)

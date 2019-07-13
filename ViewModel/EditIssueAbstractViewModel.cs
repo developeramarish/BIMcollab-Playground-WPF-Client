@@ -51,53 +51,23 @@ namespace BIMcollab_BCF_WPF_MVVM.ViewModel
 
         public string Title { get; set; }
 
-        public string Description
-        {
-            get { return this.issue.Description; }
+        public string Description { get; set; }
 
-            set { this.issue.Description = value; }
-        }
+        public string ActiveStatus { get; set; }
 
-        public string ActiveStatus
-        {
-            get { return this.GetActiveStatus(); }
-        }
+        public int ActiveType { get; set; }
 
-        public int ActiveType
-        {
-            get { return this.GetActiveType(); }
-            set { this.issue.TypeID = (uint)value; }
-        }
+        public int ActiveMilestone { get; set; }
 
-        public int ActiveMilestone
-        {
-            get { return this.GetActiveMilestone(); }
-            set { this.issue.MilestoneID = (uint) value; }
-        }
+        public int ActiveArea { get; set; }
 
-        public int ActiveArea
-        {
-            get { return this.GetActiveArea(); }
-            set { this.issue.AreaID = (uint) value; }
-        }
+        public int ActivePriority { get; set; }
 
-        public int ActivePriority
-        {
-            get { return this.GetActivePriority(); }
-            set { this.issue.PriorityID = (uint) value; }
-        }
+        public int ActiveVisibility { get; set; }
 
-        public int OwnerIndex
-        {
-            get { return this.GetOwnerIndex(); }
-            set { this.issue.OwnerIndex = (uint)value; }
-        }
+        public int OwnerIndex { get; set; }
 
-        public int ActiveVisibility
-        {
-            get { return this.GetActiveVisibility(); }
-            set { this.issue.VisibilityID = (uint) value; }
-        }
+        public uint StatusID { get; set; }
 
         public Visibility ResolvedButtonVisible
         {
@@ -154,7 +124,7 @@ namespace BIMcollab_BCF_WPF_MVVM.ViewModel
             get { return this.IsVisibilityComboBoxEnabled(); }
         }
 
-        public bool DesriptionTextBoxEnabled
+        public bool DescriptionTextBoxEnabled
         {
             get { return this.IsDescriptionTextBoxEnabled(); }
         }
@@ -164,11 +134,10 @@ namespace BIMcollab_BCF_WPF_MVVM.ViewModel
             get { return this.IsTitleTextBoxEnabled(); }
         }
 
-        public void SetIssue(Issue editedIssue)
+        public void EditIssue(Issue editedIssue)
         {
             this.issue = editedIssue;
-
-            this.Title = this.issue.Title;
+            this.Load();
         }
 
         public void CreateNewIssue()
@@ -183,21 +152,58 @@ namespace BIMcollab_BCF_WPF_MVVM.ViewModel
             BC_Issue newIssue = this.activeProject.CreateIssue();
 
             this.issue = new Issue(newIssue, ref milestones, ref areas, ref labels, ref types, ref priorities, ref statuses);
+            this.Load();
         }
 
         public void SetStatusActive()
         {
-            this.issue.StatusID = BcIssueStatusActive;
+            this.StatusID = BcIssueStatusActive;
         }
 
         public void SetStatusClosed()
         {
-            this.issue.StatusID = BcIssueStatusClosed;
+            this.StatusID = BcIssueStatusClosed;
         }
 
         public void SetStatusResolved()
         {
-            this.issue.StatusID = BcIssueStatusResolved;
+            this.StatusID = BcIssueStatusResolved;
+        }
+
+        public void Save()
+        {
+            this.issue.Title = this.Title;
+            this.issue.Description = this.Description;
+            this.issue.StatusID = this.StatusID;
+            this.issue.TypeID = (uint) this.ActiveType;
+            this.issue.MilestoneID = (uint) this.ActiveMilestone;
+            this.issue.AreaID = (uint) this.ActiveArea;
+            this.issue.PriorityID = (uint) this.ActivePriority;
+            this.issue.VisibilityID = (uint) this.ActiveVisibility;
+            this.issue.OwnerIndex = (uint) this.OwnerIndex;
+
+            List<string> statuses = this.activeProject.Statuses;
+
+            this.issue.Status = statuses[(int)this.issue.StatusID];
+            this.issue.Type = this.Types[(int) this.issue.TypeID];
+            this.issue.Area = this.Areas[(int) this.issue.AreaID];
+            this.issue.Milestone = this.Milestones[(int) this.issue.MilestoneID];
+            this.issue.Priority = this.Priorities[(int) this.issue.PriorityID];
+
+            this.issue.IncludeInPublish();
+        }
+
+        private void Load()
+        {
+            this.Title = this.issue.Title;
+            this.Description = this.issue.Description;
+            this.ActiveStatus = this.GetActiveStatus();
+            this.ActiveType = this.GetActiveType();
+            this.ActiveMilestone = this.GetActiveMilestone();
+            this.ActiveArea = this.GetActiveArea();
+            this.ActivePriority = this.GetActivePriority();
+            this.ActiveVisibility = this.GetActiveVisibility();
+            this.OwnerIndex = this.GetOwnerIndex();
         }
 
         private Visibility IsResolvedButtonVisible()
